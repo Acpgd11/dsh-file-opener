@@ -1,6 +1,6 @@
 {
   "name": "dsh-file-opener",
-  "version": "1.4.0",
+  "version": "1.5.0",
   "description": "DSH 插件：对话里的文件与目录路径点一下就打开——可预览的在右侧侧边栏显示，其余用系统默认程序打开。",
   "keywords": [
     "dsh",
@@ -56,12 +56,31 @@
     "url": "https://github.com/sailoumili/dsh-file-opener/issues"
   },
   "dsh": {
+    "compatibility": {
+      "dshReleases": {
+        "0.1.7-rc.1": "compatible",
+        "0.1.7-rc.2": "compatible",
+        "0.2.0-rc.1": "compatible",
+        "0.2.0-rc.2": "compatible",
+        "0.2.1-rc.1": "compatible",
+        "0.2.1-rc.2": "compatible",
+        "0.2.1-rc.3": "compatible"
+      }
+    },
     "bundle": {
       "patch": "./cordis.patch.yml"
     },
     "client": {
       "inject": [],
       "platform": "web"
+    }
+  },
+  "peerDependencies": {
+    "@deepseek-ai/dsh": "^0.1.7-rc.1 || ^0.2.0-rc.1"
+  },
+  "peerDependenciesMeta": {
+    "@deepseek-ai/dsh": {
+      "optional": true
     }
   }
 }
